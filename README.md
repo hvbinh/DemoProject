@@ -6,4 +6,4 @@
 # Open project
 1. Open project by IntelliJ IDEA
 2. In intelliJ IDEA: click File/Project Structure/Project: select java 11
-3. Go to testng.xml: right click then select Run
+3. Go to RunTestCases.xml: right click then select Run
