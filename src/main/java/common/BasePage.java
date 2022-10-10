@@ -25,8 +25,6 @@ public class BasePage {
         return driver.findElements(getByLocator(locatorType));
     }
 
-
-
     protected void clickToElement(WebDriver driver, String locatorType) {
         element = getElement(driver, locatorType);
         if(driver.toString().toLowerCase().contains("internet explorer"))
@@ -41,6 +39,7 @@ public class BasePage {
         }
 
     }
+
     private By getByLocator(String locatorType) {
         By by = null;
         if (locatorType.startsWith("id=") || locatorType.startsWith("Id=") || locatorType.startsWith("ID=")) {
@@ -62,8 +61,6 @@ public class BasePage {
         return by;
     }
 
-
-
     protected void sendkeyToElement(WebDriver driver, String locatorType, String value) {
         element = getElement(driver, locatorType);
         element.click();
@@ -71,14 +68,10 @@ public class BasePage {
         element.sendKeys(value);
     }
 
-
     protected String getDynamicLocator(String locatorType, String... values) {
         locatorType = String.format(locatorType, (Object[]) values);
         return locatorType;
     }
-
-
-
 
     protected void sleepInSecond(long second) {
 
@@ -90,36 +83,25 @@ public class BasePage {
 
     }
 
-
-
     protected String getElementText(WebDriver driver, String locatorType) {
         element = getElement(driver, locatorType);
         return element.getText();
     }
 
-
-
     protected boolean isElementDisplayed(WebDriver driver, String locatorType) {
         return getElement(driver, locatorType).isDisplayed();
     }
-
-
-
-
 
     protected void sendKeyBoardToElement(WebDriver driver, String locatorType, Keys key) {
         action = new Actions(driver);
         action.sendKeys(getElement(driver, locatorType), key).perform();
     }
 
-
-
     protected void clickToElementByJS(WebDriver driver, String locatorType) {
         jsExecutor = (JavascriptExecutor) driver;
         element = getElement(driver, locatorType);
         jsExecutor.executeScript("arguments[0].click();", element);
     }
-
 
     protected void waitToElementVisible(WebDriver driver, String locatorType) {
 
@@ -129,13 +111,10 @@ public class BasePage {
 
     }
 
-
-
     protected void waitToElementClickable(WebDriver driver, String locatorType) {
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(GlobalConstants.SHORT_TIME));
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locatorType)));
     }
-
 
     protected void overrideImplicitWait(WebDriver driver, long timeSecond)
     {
