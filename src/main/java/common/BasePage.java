@@ -63,8 +63,8 @@ public class BasePage {
 
     protected void sendkeyToElement(WebDriver driver, String locatorType, String value) {
         element = getElement(driver, locatorType);
-        element.click();
         element.clear();
+        element.click();
         element.sendKeys(value);
     }
 

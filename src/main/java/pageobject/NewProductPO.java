@@ -21,6 +21,7 @@ public class NewProductPO extends BasePage {
 
     public void updateQuantityProductWithValue(String quantityProduct) {
         waitToElementClickable(driver, NewProductPageUI.QUANTITY_PRODUCT_INPUT);
+        waitToElementVisible(driver, NewProductPageUI.QUANTITY_PRODUCT_INPUT);
         sleepInSecond(3);
         clearElementTextByKeyboard(driver, NewProductPageUI.QUANTITY_PRODUCT_INPUT);
         sendkeyToElement(driver, NewProductPageUI.QUANTITY_PRODUCT_INPUT, quantityProduct.toString());

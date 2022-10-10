@@ -37,7 +37,7 @@ public class ManufacturingDetailPO extends BasePage {
 
     public String getManufacturingOrderName() {
         waitToElementVisible(driver, ManufacturingDetailPageUI.MANUFACTURING_ORDER_VALUE);
-        sleepInSecond(2);
+        sleepInSecond(3);
         return getElementText(driver, ManufacturingDetailPageUI.MANUFACTURING_ORDER_VALUE);
     }
 
