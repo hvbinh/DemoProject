@@ -94,7 +94,7 @@
                 <configuration>
                     <!-- Run TestNG xml file -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>RunTestCases.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
 
