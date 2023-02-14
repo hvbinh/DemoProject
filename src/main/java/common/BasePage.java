@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
-public class BasePage{
+public class BasePage {
 
     protected WebElement getElement(WebDriver driver, String locatorType) {
         return driver.findElement(getByLocator(locatorType));
