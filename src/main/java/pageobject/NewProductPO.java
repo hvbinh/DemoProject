@@ -25,6 +25,7 @@ public class NewProductPO extends BasePage {
         sleepInSecond(3);
         clearElementTextByKeyboard(driver, NewProductPageUI.QUANTITY_PRODUCT_INPUT);
         sendkeyToElement(driver, NewProductPageUI.QUANTITY_PRODUCT_INPUT, quantityProduct.toString());
+        sleepInSecond(1);
         sendKeyBoardToElement(driver, NewProductPageUI.QUANTITY_PRODUCT_INPUT,Keys.ENTER);
     }
 
