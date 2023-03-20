@@ -32,11 +32,11 @@ public class PropertiesFile {
     }
 
     //Xây dựng hàm Get Value từ Key của file properties đã setup bên trên
-    public static String getPropValue(String KeyProp) {
+    public static String getPropValue(String keyProp) {
         String value = null;
         try {
             //get values from properties file
-            value = properties.getProperty(KeyProp);
+            value = properties.getProperty(keyProp);
             return value;
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -47,12 +47,12 @@ public class PropertiesFile {
     }
 
     //Xây dựng hàm Set Value với Key tương ứng vào trong file properties đã setup bên trên
-    public static void setPropValue(String KeyProp, String Value) {
+    public static void setPropValue(String keyProp, String value) {
         try {
             //Khởi tạo giá trị cho đối tượng của class FileOutputStream
             fileOut = new FileOutputStream(GlobalConstants.ROOT_FOLDER + File.separator + propertiesFilePathRoot);
             //Load properties file hiện tại và thực hiện mapping value với key tương ứng
-            properties.setProperty(KeyProp, Value);
+            properties.setProperty(keyProp, value);
             //Lưu key và value vào properties file
             properties.store(fileOut, "Set new value in properties file");
             System.out.println("Set new value in file properties success.");
